@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Assignment #2</title>
+
+	<link rel="stylesheet" href="styles/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Lora|Open+Sans' rel='stylesheet' type='text/css'>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+  <div id="top" class="container">
+    <header>
+      <a href="index.html"><img src="images/logo.png" alt="logo img" class="logo" /></a>
+      <nav>
+        <a id="touch-menu" class="mobile-menu" href="#"><i class="fa fa-bars fa-2x"></i></a>
+        <ul class="menu">
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </nav>
+    </header>  
+
+    <!-- Body -->  
+    <div class="projects">
+      <ul>
+        <li><a href="#">All</a></li>
+        <li><a href="#">Identity</a></li>
+        <li><a href="#">Packaging</a></li>
+        <li><a href="#">Service</a></li>
+      </ul> 
+    </div>
+
+    <section class="thumbs clearfix">
+      <article class="box">
+          <img src="http://lorempixel.com//505/305">
+          <p>Photo caption</p>
+          <h3>This is some info</h3>
+      </article>
+      <article class="box">
+        <img src="http://lorempixel.com//505/335">
+        <p>Photo caption</p>
+        <h3>This is some info</h3>
+      </article>
+      <article class="box">
+        <img src="http://lorempixel.com//505/300">
+        <p>Photo caption</p>
+        <h3>This is some info</h3>
+      </article>
+      <article class="box">
+        <img src="http://lorempixel.com//505/535">
+        <p>Photo caption</p>
+        <h3>This is some info</h3>
+      </article>
+      <article class="box">
+        <img src="http://lorempixel.com//505/315">
+        <p>Photo caption</p>
+        <h3>This is some info</h3>
+      </article>
+      <article class="box">
+        <img src="http://lorempixel.com//505/290">
+        <p>Photo caption</p>
+        <h3>This is some info</h3>
+      </article>
+    </section>
+    <section class="thumbs clearfix">
+      <article class="box">
+          <img src="http://lorempixel.com//505/305">
+          <p>Photo caption</p>
+          <h3>This is some info</h3>
+      </article>
+      <article class="box">
+        <img src="http://lorempixel.com//505/335">
+        <p>Photo caption</p>
+        <h3>This is some info</h3>
+      </article>
+      <article class="box">
+        <img src="http://lorempixel.com//505/300">
+        <p>Photo caption</p>
+        <h3>This is some info</h3>
+      </article>
+      <article class="box">
+        <img src="http://lorempixel.com//505/535">
+        <p>Photo caption</p>
+        <h3>This is some info</h3>
+      </article>
+      <article class="box">
+        <img src="http://lorempixel.com//505/315">
+        <p>Photo caption</p>
+        <h3>This is some info</h3>
+      </article>
+      <article class="box">
+        <img src="http://lorempixel.com//505/290">
+        <p>Photo caption</p>
+        <h3>This is some info</h3>
+      </article>
+    </section>
+
+  </div>
+  <footer>
+    <div id="hidden">
+      <a href="#">Contact Us</a>
+    </div> 
+    <div id="footercontact">
+      <p class="email">Send an email<br>
+      <a href="mailto:hello@business.com">hello@business.com</a>
+    </p>
+    <p class="contact">Visit us<br>
+      <a href="contact.html">123 Fake St, Toronto</a>
+    </p>
+    </div>
+    <div id="social">
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-linkedin-square"></i></a>
+     </div> 
+  </footer>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      var touch = $("#touch-menu");
+      var menu = $(".menu");
+
+      $(touch).on("click", function(e){
+        e.preventDefault();
+        menu.slideToggle();
+      });
+
+      $(window).resize(function(){
+        var w = $(window).width();
+        if(w > 768 && menu.is(":hidden")) {
+          menu.removeAttr("style");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
